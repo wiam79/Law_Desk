@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="top-nav" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lexsolo.controller.TopNavController">
+   <children>
+      <!-- Logo -->
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Label text="⚖" textFill="#d97706">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label style="-fx-font-weight: bold; -fx-text-fill: white;" text="LEXSOLO">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+
+      <Region HBox.hgrow="ALWAYS" />
+
+      <!-- Navigation Links -->
+      <Button onAction="#goToHome" styleClass="button-nav" text="Accueil" />
+      <Button onAction="#goToClients" styleClass="button-nav" text="Clients" />
+      <Button onAction="#goToDossiers" styleClass="button-nav" text="Dossiers" />
+      <Button onAction="#goToRendezVous" styleClass="button-nav" text="Rendez-vous" />
+
+      <Region HBox.hgrow="ALWAYS" />
+
+      <!-- User Profile -->
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="Me. Admin" />
+            <Button onAction="#handleLogout" style="-fx-background-color: transparent; -fx-text-fill: #d97706; -fx-cursor: hand;" text="⏻" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+   </padding>
+</HBox>
